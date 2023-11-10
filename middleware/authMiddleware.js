@@ -43,7 +43,7 @@ const isMyPub = async (req, res, next) => {
     } else {
       return res
         .status(403)
-        .json({ message: "You are not allowed to access this route" });
+        .json({ message: "This is not your publication " });
     }
   } catch (error) {
     return res.status(500).json({ message: error.message });
